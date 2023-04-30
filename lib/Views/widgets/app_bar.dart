@@ -5,22 +5,25 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(20), // Set this height
-        child: Container(
-          color: Colors.orange,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text('One'),
-              Text('Two'),
-              Text('Three'),
-              Text('Four'),
-            ],
+    return Stack(
+
+      children: [
+        const Positioned(
+          top: 40,
+          right: 25,
+          child: Icon(Icons.person,size: 30,)
+        ),
+        Positioned(
+          top: 40,
+          left: 25,
+          child: GestureDetector(
+              onTap: (){
+
+              },
+              child: const Icon(Icons.arrow_back,size: 35,)
           ),
         ),
-      ),
+      ],
     );
   }
 }
