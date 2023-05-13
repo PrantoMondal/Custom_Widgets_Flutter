@@ -1,3 +1,4 @@
+import 'package:customized_widgets/Views/teachers_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'Views/home_screen.dart';
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: Homepage.id,
       routes: {
-        Homepage.id: (_) => const Homepage()
+        Homepage.id: (_) => const Homepage(),
+        TeachersScreen.id: (_) => const TeachersScreen(),
       },
     );
   }

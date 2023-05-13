@@ -1,3 +1,4 @@
+import 'package:customized_widgets/Views/teachers_screen.dart';
 import 'package:customized_widgets/Views/widgets/app_bar.dart';
 import 'package:customized_widgets/Views/widgets/custom_card.dart';
 import 'package:flutter/material.dart';
@@ -20,16 +21,35 @@ class _HomepageState extends State<Homepage> {
         child: CustomAppBar(),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: const [
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
             CustomCard(
-              width: 100, height: 100, color: Colors.pink,
+              onTap: () {
+                print("Clicked!");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const TeachersScreen()));
+              },
+              width: 100,
+              height: 100,
+              color: Colors.red,
+              title: "Teachers",
             ),
             CustomCard(
-              width: 100, height: 100, color: Colors.blue,
+              onTap: () {
+                print("Clicked 2!");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const TeachersScreen()));
+              },
+              width: 100,
+              height: 100,
+              color: Colors.blue,
+              title: "Subjects",
             ),
-
           ],
         ),
       ),
